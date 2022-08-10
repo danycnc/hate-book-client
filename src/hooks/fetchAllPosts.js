@@ -2,7 +2,7 @@ import { postsSlicer } from '../slicers/postsSlicer';
 
 function fetchAllPosts(token) {
   return (dispatch) => {
-    fetch('http://localhost:3000/posts', {
+    fetch('http://https://hate-bk-svr.herokuapp.com//posts', {
       headers: {
         'Content-Type': 'application/json',
         Authorization: token,

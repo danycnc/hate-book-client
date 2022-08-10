@@ -35,13 +35,16 @@ const Post = ({ postData, user_id, deletePost, editPost, likedPosts }) => {
   function handleLike() {
     setToggleLike(!toggleLike);
 
-    fetch(`http://localhost:3000/posts/${postData.id}/like/${user_id}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: token,
-      },
-    })
+    fetch(
+      `http://https://hate-bk-svr.herokuapp.com//posts/${postData.id}/like/${user_id}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: token,
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => console.log(data))
       .catch((error) => {

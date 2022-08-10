@@ -26,13 +26,16 @@ const Sidebar = ({ children }) => {
     const formData = new FormData();
     formData.append('username', user?.username);
     formData.append('image', file);
-    fetch(`http://localhost:3000/photo/upload/${user?.id}`, {
-      method: 'POST',
-      headers: {
-        Authorization: token,
-      },
-      body: formData,
-    })
+    fetch(
+      `http://https://hate-bk-svr.herokuapp.com//photo/upload/${user?.id}`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: token,
+        },
+        body: formData,
+      }
+    )
       .then((response) => response.json())
       .then((data) => setReqStatus(data))
       .catch((error) => {
@@ -79,7 +82,7 @@ const Sidebar = ({ children }) => {
         <img
           src={
             (user?.image_profile &&
-              `http://localhost:3000/profile/${user?.image_profile}`) ||
+              `http://https://hate-bk-svr.herokuapp.com//profile/${user?.image_profile}`) ||
             userLogo
           }
           alt='user'

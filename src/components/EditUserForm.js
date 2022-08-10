@@ -108,7 +108,7 @@ const EditUserForm = ({ close }) => {
   function submit() {
     setReqStatus('');
 
-    fetch(`http://localhost:3000/user/${user?.id}`, {
+    fetch(`http://https://hate-bk-svr.herokuapp.com//user/${user?.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
