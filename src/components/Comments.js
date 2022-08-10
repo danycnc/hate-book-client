@@ -14,20 +14,17 @@ const Comments = ({ postData, user_id, commentsList }) => {
   }
 
   function addComment() {
-    fetch(
-      `http://https://hate-bk-svr.herokuapp.com/posts/comments/${postData?.id}`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: token,
-        },
-        body: JSON.stringify({
-          uid: user_id,
-          content: newComment,
-        }),
-      }
-    )
+    fetch(`https://hate-bk-svr.herokuapp.com/posts/comments/${postData?.id}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: token,
+      },
+      body: JSON.stringify({
+        uid: user_id,
+        content: newComment,
+      }),
+    })
       .then((response) => response.json())
       .then(() => dispatch(fetchPosts(token)))
       .catch((err) => console.log(err.message));

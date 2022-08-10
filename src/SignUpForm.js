@@ -100,7 +100,7 @@ export function SignUpForm() {
   const submit = () => {
     setReqStatus('');
 
-    fetch('http://https://hate-bk-svr.herokuapp.com/users', {
+    fetch('https://hate-bk-svr.herokuapp.com/users', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',

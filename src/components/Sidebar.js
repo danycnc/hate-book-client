@@ -26,7 +26,7 @@ const Sidebar = ({ children }) => {
     const formData = new FormData();
     formData.append('username', user?.username);
     formData.append('image', file);
-    fetch(`http://https://hate-bk-svr.herokuapp.com/photo/upload/${user?.id}`, {
+    fetch(`https://hate-bk-svr.herokuapp.com/photo/upload/${user?.id}`, {
       method: 'POST',
       headers: {
         Authorization: token,
@@ -79,7 +79,7 @@ const Sidebar = ({ children }) => {
         <img
           src={
             (user?.image_profile &&
-              `http://https://hate-bk-svr.herokuapp.com/profile/${user?.image_profile}`) ||
+              `https://hate-bk-svr.herokuapp.com/profile/${user?.image_profile}`) ||
             userLogo
           }
           alt='user'

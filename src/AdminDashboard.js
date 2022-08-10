@@ -4,7 +4,7 @@ const AdminDashboard = () => {
   const [usersList, setUsersList] = useState([]);
 
   const getUsers = () => {
-    fetch('http://https://hate-bk-svr.herokuapp.com/users')
+    fetch('https://hate-bk-svr.herokuapp.com/users')
       .then((response) => response.json())
       .then((data) => setUsersList(data))
       .catch((error) => {
