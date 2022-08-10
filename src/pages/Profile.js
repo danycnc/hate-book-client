@@ -34,7 +34,7 @@ const Profile = () => {
 
   function getData() {
     return (dispatch) => {
-      fetch(`http://https://hate-bk-svr.herokuapp.com//users/${uid.id}`, {
+      fetch(`http://https://hate-bk-svr.herokuapp.com/users/${uid.id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: token,

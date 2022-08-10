@@ -36,7 +36,7 @@ const Post = ({ postData, user_id, deletePost, editPost, likedPosts }) => {
     setToggleLike(!toggleLike);
 
     fetch(
-      `http://https://hate-bk-svr.herokuapp.com//posts/${postData.id}/like/${user_id}`,
+      `http://https://hate-bk-svr.herokuapp.com/posts/${postData.id}/like/${user_id}`,
       {
         method: 'POST',
         headers: {

@@ -76,7 +76,7 @@ const LoginForm = () => {
   function submit() {
     setReqStatus('');
 
-    fetch('http://https://hate-bk-svr.herokuapp.com//users/login', {
+    fetch('http://https://hate-bk-svr.herokuapp.com/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -4,7 +4,7 @@ const UsersList = () => {
   const [users, setUsers] = useState([]);
 
   const getUsers = () => {
-    fetch('http://https://hate-bk-svr.herokuapp.com//users')
+    fetch('http://https://hate-bk-svr.herokuapp.com/users')
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => {

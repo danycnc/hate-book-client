@@ -38,15 +38,12 @@ const Feed = () => {
 
   function fetchLikedPosts() {
     if (user.id) {
-      fetch(
-        `http://https://hate-bk-svr.herokuapp.com//posts/likes/${user.id}`,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: token,
-          },
-        }
-      )
+      fetch(`http://https://hate-bk-svr.herokuapp.com/posts/likes/${user.id}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: token,
+        },
+      })
         .then((response) => response.json())
         .then((data) => setlikedPosts(data))
         .catch((error) => {
@@ -57,7 +54,7 @@ const Feed = () => {
 
   function fetchUserPosts() {
     if (user) {
-      fetch(`http://https://hate-bk-svr.herokuapp.com//posts/${user.id}`)
+      fetch(`http://https://hate-bk-svr.herokuapp.com/posts/${user.id}`)
         .then((response) => response.json())
         .then((data) => setUserPosts(data))
         .catch((error) => {
@@ -67,7 +64,7 @@ const Feed = () => {
   }
 
   function sendPost() {
-    fetch('http://https://hate-bk-svr.herokuapp.com//posts', {
+    fetch('http://https://hate-bk-svr.herokuapp.com/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -89,7 +86,7 @@ const Feed = () => {
   }
 
   const deletePost = (post_id) => {
-    fetch(`http://https://hate-bk-svr.herokuapp.com//posts/${post_id}`, {
+    fetch(`http://https://hate-bk-svr.herokuapp.com/posts/${post_id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -104,7 +101,7 @@ const Feed = () => {
   };
 
   const editPost = (post_id, modifiedContent) => {
-    fetch(`http://https://hate-bk-svr.herokuapp.com//posts/${post_id}`, {
+    fetch(`http://https://hate-bk-svr.herokuapp.com/posts/${post_id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

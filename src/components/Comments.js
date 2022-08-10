@@ -15,7 +15,7 @@ const Comments = ({ postData, user_id, commentsList }) => {
 
   function addComment() {
     fetch(
-      `http://https://hate-bk-svr.herokuapp.com//posts/comments/${postData?.id}`,
+      `http://https://hate-bk-svr.herokuapp.com/posts/comments/${postData?.id}`,
       {
         method: 'POST',
         headers: {
